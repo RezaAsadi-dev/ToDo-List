@@ -1,150 +1,155 @@
-# 📝 برنامه مدیریت تسک‌ها (ToDo App)
+# 📝 Task Management App (ToDo App)
 
-یک برنامه مدیریت تسک‌های مدرن و زیبا با رابط کاربری فارسی که به شما امکان سازماندهی کارهای روزمره را در پوشه‌های رنگی می‌دهد.
+A modern and beautiful task management application with a Persian user interface that allows you to organize your daily tasks in colorful folders.
 
-## ✨ ویژگی‌ها
+## ✨ Features
 
-- 📁 **مدیریت پوشه‌ها**: ایجاد پوشه‌های رنگی برای دسته‌بندی تسک‌ها
-- ✅ **مدیریت تسک‌ها**: افزودن، ویرایش و حذف تسک‌ها
-- 🔍 **جستجو**: جستجوی سریع در میان تمام تسک‌ها
-- 🎯 **فیلتر کردن**: فیلتر بر اساس وضعیت (همه، فعال، انجام شده)
-- 🎨 **رابط کاربری زیبا**: طراحی مدرن با گرادیان‌های رنگی و انیمیشن‌های نرم
-- 📱 **واکنش‌گرا**: سازگار با تمام اندازه‌های صفحه
-- 🇮🇷 **پشتیبانی از فارسی**: استفاده از فونت IRANSans و راست‌چین
+- 📁 **Folder Management**: Create colorful folders to categorize tasks
+- ✅ **Task Management**: Add, edit, and delete tasks
+- 🔍 **Search**: Quick search across all tasks
+- 🎯 **Filtering**: Filter by status (All, Active, Completed)
+- 🎨 **Beautiful UI**: Modern design with colorful gradients and smooth animations
+- 📱 **Responsive**: Compatible with all screen sizes
+- 🇮🇷 **Persian Support**: Uses IRANSans font and RTL layout
 
-## 🛠️ تکنولوژی‌ها
+## 🛠️ Technologies
 
-- **React 19**: کتابخانه اصلی رابط کاربری
-- **Vite**: ابزار ساخت سریع و مدرن
-- **Zustand**: مدیریت state ساده و قدرتمند
-- **Tailwind CSS 4**: استایل‌دهی با utility classes
-- **Lucide React**: آیکون‌های زیبا و مدرن
+- **React 19**: Main UI library
+- **Vite**: Fast and modern build tool
+- **Zustand**: Simple and powerful state management
+- **Tailwind CSS 4**: Styling with utility classes
+- **Lucide React**: Beautiful and modern icons
 
-## 📦 نصب و راه‌اندازی
+## 📦 Installation and Setup
 
-### پیش‌نیازها
+### Prerequisites
 
-- Node.js (نسخه 18 یا بالاتر)
-- npm یا yarn
+- Node.js (version 18 or higher)
+- npm or yarn
 
-### مراحل نصب
+### Installation Steps
 
-1. کلون کردن پروژه:
+1. Clone the project:
+
 ```bash
 git clone <repository-url>
 cd My-ToDo
 ```
 
-2. نصب وابستگی‌ها:
+2. Install dependencies:
+
 ```bash
 npm install
 ```
 
-3. اجرای پروژه در حالت توسعه:
+3. Run the project in development mode:
+
 ```bash
 npm run dev
 ```
 
-4. ساخت نسخه production:
+4. Build for production:
+
 ```bash
 npm run build
 ```
 
-5. پیش‌نمایش نسخه production:
+5. Preview production build:
+
 ```bash
 npm run preview
 ```
 
-## 📁 ساختار پروژه
+## 📁 Project Structure
 
 ```
 src/
-├── assets/           # فایل‌های استاتیک (فونت‌ها، تصاویر)
-├── components/      # کامپوننت‌های قابل استفاده مجدد
-│   ├── folder/      # کامپوننت‌های مرتبط با پوشه‌ها
-│   ├── layout/      # کامپوننت‌های چیدمان (Header, Background)
-│   ├── modals/      # مودال‌ها (FolderModal, TaskModal, DeleteModal)
-│   └── todo/        # کامپوننت‌های مرتبط با تسک‌ها
-├── hooks/           # هوک‌های سفارشی
-├── pages/           # صفحات اصلی برنامه
-├── store/           # مدیریت state (Zustand)
-├── utils/           # توابع کمکی و ثوابت
-├── App.jsx          # کامپوننت اصلی
-├── main.jsx         # نقطه ورود برنامه
-└── index.css        # استایل‌های全局
+├── assets/           # Static files (fonts, images)
+├── components/      # Reusable components
+│   ├── folder/      # Folder-related components
+│   ├── layout/      # Layout components (Header, Background)
+│   ├── modals/      # Modals (FolderModal, TaskModal, DeleteModal)
+│   └── todo/        # Task-related components
+├── hooks/           # Custom hooks
+├── pages/           # Main application pages
+├── store/           # State management (Zustand)
+├── utils/           # Helper functions and constants
+├── App.jsx          # Main component
+├── main.jsx         # Application entry point
+└── index.css        # Global styles
 ```
 
-## 🎯 نحوه استفاده
+## 🎯 How to Use
 
-### ایجاد پوشه جدید
+### Creating a New Folder
 
-1. روی دکمه "پوشه جدید" کلیک کنید
-2. نام پوشه را وارد کنید (حداقل ۲ کاراکتر)
-3. یک رنگ برای پوشه انتخاب کنید
-4. روی "افزودن پوشه" کلیک کنید
+1. Click on the "New Folder" button
+2. Enter the folder name (minimum 2 characters)
+3. Select a color for the folder
+4. Click on "Add Folder"
 
-### افزودن تسک
+### Adding a Task
 
-1. روی دکمه "افزودن تسک" کلیک کنید
-2. پوشه مورد نظر را انتخاب کنید
-3. نام تسک را وارد کنید (حداقل ۲ کاراکتر)
-4. (اختیاری) توضیحات تسک را اضافه کنید
-5. روی "افزودن تسک" کلیک کنید
+1. Click on the "Add Task" button
+2. Select the desired folder
+3. Enter the task name (minimum 2 characters)
+4. (Optional) Add task description
+5. Click on "Add Task"
 
-### مدیریت تسک‌ها
+### Managing Tasks
 
-- ✅ **تکمیل تسک**: روی چک‌باکس کنار تسک کلیک کنید
-- ✏️ **ویرایش تسک**: روی آیکون ویرایش در حالت hover کلیک کنید
-- 🗑️ **حذف تسک**: روی آیکون حذف در حالت hover کلیک کنید
+- ✅ **Complete Task**: Click on the checkbox next to the task
+- ✏️ **Edit Task**: Click on the edit icon on hover
+- 🗑️ **Delete Task**: Click on the delete icon on hover
 
-### جستجو و فیلتر
+### Search and Filter
 
-- در نوار جستجو متن مورد نظر را تایپ کنید
-- با استفاده از دکمه‌های فیلتر می‌توانید تسک‌ها را بر اساس وضعیت فیلتر کنید:
-  - **همه**: نمایش تمام تسک‌ها
-  - **فعال**: فقط تسک‌های انجام نشده
-  - **انجام شده**: فقط تسک‌های تکمیل شده
+- Type your search query in the search bar
+- Use filter buttons to filter tasks by status:
+  - **All**: Show all tasks
+  - **Active**: Only incomplete tasks
+  - **Completed**: Only completed tasks
 
-## 🎨 رنگ‌های موجود
+## 🎨 Available Colors
 
-- 🟣 بنفش (Purple)
-- 🔵 آبی (Blue)
-- 🩷 صورتی (Pink)
-- 🟢 سبز (Green)
-- 🔴 قرمز (Red)
-- 🟠 نارنجی (Orange)
+- 🟣 Purple
+- 🔵 Blue
+- 🩷 Pink
+- 🟢 Green
+- 🔴 Red
+- 🟠 Orange
 
-## 🔧 اسکریپت‌ها
+## 🔧 Scripts
 
-- `npm run dev`: اجرای سرور توسعه با HMR
-- `npm run build`: ساخت نسخه production
-- `npm run preview`: پیش‌نمایش نسخه ساخته شده
-- `npm run lint`: بررسی کد با ESLint
+- `npm run dev`: Run development server with HMR
+- `npm run build`: Build for production
+- `npm run preview`: Preview production build
+- `npm run lint`: Check code with ESLint
 
-## 📝 یادداشت‌ها
+## 📝 Notes
 
-- این پروژه از Zustand برای مدیریت state استفاده می‌کند
-- فونت IRANSans برای نمایش بهتر متن‌های فارسی استفاده شده است
-- تمام اعتبارسنجی‌ها در سمت کلاینت انجام می‌شود
+- This project uses Zustand for state management
+- IRANSans font is used for better Persian text display
+- All validations are performed on the client side
 
-## 🤝 مشارکت
+## 🤝 Contributing
 
-برای مشارکت در این پروژه:
+To contribute to this project:
 
-1. پروژه را Fork کنید
-2. یک branch جدید ایجاد کنید (`git checkout -b feature/AmazingFeature`)
-3. تغییرات را commit کنید (`git commit -m 'Add some AmazingFeature'`)
-4. به branch خود push کنید (`git push origin feature/AmazingFeature`)
-5. یک Pull Request باز کنید
+1. Fork the project
+2. Create a new branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to your branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## 📄 مجوز
+## 📄 License
 
-این پروژه تحت مجوز MIT منتشر شده است.
+This project is released under the MIT License.
 
-## 👨‍💻 توسعه‌دهنده
+## 👨‍💻 Developer
 
-این پروژه با ❤️ و استفاده از آخرین تکنولوژی‌های وب توسعه یافته است.
+This project was developed with ❤️ using the latest web technologies.
 
 ---
 
-**نکته**: این برنامه به صورت local state کار می‌کند و داده‌ها در مرورگر ذخیره نمی‌شوند. برای ذخیره‌سازی دائمی، می‌توانید از localStorage یا یک backend استفاده کنید.
+**Note**: This application works with local state and data is not stored in the browser. For persistent storage, you can use localStorage or a backend.
