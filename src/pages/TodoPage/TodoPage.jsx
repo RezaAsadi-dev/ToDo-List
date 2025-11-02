@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Plus, FolderOpen, Search } from 'lucide-react';
 import { useTodoStore } from '../../store/todoStore';
-import { useFilter } from '../../hooks/useFilter';
+import { filterTodosByStatus, filterTodosBySearch } from '../../utils/helpers';
 import GradientBackground from '../../components/layout/Background/GradientBackground';
 import Header from '../../components/layout/Header/Header';
 import SearchBar from '../../components/todo/SearchBar/SearchBar';
@@ -139,7 +139,8 @@ export default function TodoPage() {
         <div className="space-y-4">
           {folders.map(folder => {
             const folderTodos = todos.filter(todo => todo.folderId === folder.id);
-            const filteredTodos = useFilter(folderTodos, searchQuery, filterStatus);
+            let filteredTodos = filterTodosByStatus(folderTodos, filterStatus);
+            filteredTodos = filterTodosBySearch(filteredTodos, searchQuery);
 
             // Hide folder if no tasks match filter/search
             if (filteredTodos.length === 0 && (searchQuery || filterStatus !== 'all')) {
@@ -174,7 +175,8 @@ export default function TodoPage() {
 
           {folders.length > 0 && folders.every(folder => {
             const folderTodos = todos.filter(todo => todo.folderId === folder.id);
-            const filteredTodos = useFilter(folderTodos, searchQuery, filterStatus);
+            let filteredTodos = filterTodosByStatus(folderTodos, filterStatus);
+            filteredTodos = filterTodosBySearch(filteredTodos, searchQuery);
             return filteredTodos.length === 0;
           }) && (searchQuery || filterStatus !== 'all') && (
             <div className="text-center py-20">
